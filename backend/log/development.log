@@ -135,3 +135,294 @@ Completed 200 OK in 29ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 280
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2784033820721176485)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2784033820721176485)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2784033820721176485)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2784033820721176485)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2784033820721176485)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToCreditLine (20200424175919)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "credit_lines" ADD "user_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200424175919"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserIdToWallet (20200424180018)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "wallets" ADD "user_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200424180018"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserIdToReward (20200424180128)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "rewards" ADD "user_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200424180128"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserIdToChore (20200424180135)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "chores" ADD "user_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200424180135"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserIdToCreditScore (20200424180159)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "credit_scores" ADD "user_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200424180159"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Create (0.9ms)[0m  [1m[32mINSERT INTO "families" ("family_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["family_id", "test123"], ["created_at", "2020-04-24 18:02:50.078363"], ["updated_at", "2020-04-24 18:02:50.078363"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Create (1.3ms)[0m  [1m[32mINSERT INTO "families" ("family_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["family_id", "test456"], ["created_at", "2020-04-24 18:02:50.082996"], ["updated_at", "2020-04-24 18:02:50.082996"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Load (0.2ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "family_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstname", "Mitchell"], ["lastname", "Alton"], ["email", "mitchell.alton@live.com"], ["family_id", 1], ["created_at", "2020-04-24 18:02:50.128231"], ["updated_at", "2020-04-24 18:02:50.128231"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Load (0.2ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "family_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstname", "Leasette"], ["lastname", "Alton"], ["email", "leasette@test.com"], ["family_id", 2], ["created_at", "2020-04-24 18:02:50.140422"], ["updated_at", "2020-04-24 18:02:50.140422"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Load (0.2ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "family_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstname", "Gracen"], ["lastname", "Alton"], ["email", "gracen@test.com"], ["family_id", 1], ["created_at", "2020-04-24 18:02:50.154204"], ["updated_at", "2020-04-24 18:02:50.154204"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Load (0.2ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "family_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstname", "Airah"], ["lastname", "Casey"], ["email", "airah@test.com"], ["family_id", 2], ["created_at", "2020-04-24 18:02:50.159202"], ["updated_at", "2020-04-24 18:02:50.159202"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mWallet Create (0.6ms)[0m  [1m[32mINSERT INTO "wallets" ("amount", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 0], ["created_at", "2020-04-24 18:02:50.172143"], ["updated_at", "2020-04-24 18:02:50.172143"], ["user_id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("amount", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 0], ["created_at", "2020-04-24 18:02:50.177413"], ["updated_at", "2020-04-24 18:02:50.177413"], ["user_id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCreditLine Create (0.7ms)[0m  [1m[32mINSERT INTO "credit_lines" ("amount", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 500], ["created_at", "2020-04-24 18:02:50.187895"], ["updated_at", "2020-04-24 18:02:50.187895"], ["user_id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCreditLine Create (0.3ms)[0m  [1m[32mINSERT INTO "credit_lines" ("amount", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 500], ["created_at", "2020-04-24 18:02:50.193327"], ["updated_at", "2020-04-24 18:02:50.193327"], ["user_id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCreditScore Create (0.7ms)[0m  [1m[32mINSERT INTO "credit_scores" ("score", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["score", 800], ["created_at", "2020-04-24 18:02:50.205577"], ["updated_at", "2020-04-24 18:02:50.205577"], ["user_id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCreditScore Create (0.3ms)[0m  [1m[32mINSERT INTO "credit_scores" ("score", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["score", 800], ["created_at", "2020-04-24 18:02:50.210972"], ["updated_at", "2020-04-24 18:02:50.210972"], ["user_id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReward Create (0.6ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sleep Over"], ["description", "Use your credits to have a friend over for a sleep over."], ["price", 75], ["created_at", "2020-04-24 18:02:50.223161"], ["updated_at", "2020-04-24 18:02:50.223161"], ["user_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "New Video Game"], ["description", "Use your credits to purchase a new video game. (Approval of game contigent. Discalimer: If not approved you will be refunded for your purchase in full.)"], ["price", 250], ["created_at", "2020-04-24 18:02:50.228379"], ["updated_at", "2020-04-24 18:02:50.228379"], ["user_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dessert"], ["description", "Use your credits to have dessert and you get to choose what is for dessert."], ["price", 30], ["created_at", "2020-04-24 18:02:50.233042"], ["updated_at", "2020-04-24 18:02:50.233042"], ["user_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Outing"], ["description", "Use your credits to got to the zoo, restaurant, or some place of your choice."], ["price", 150], ["created_at", "2020-04-24 18:02:50.237456"], ["updated_at", "2020-04-24 18:02:50.237456"], ["user_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bonus Screen Time"], ["description", "Use your credits to get more time on video games, watching movies, etc."], ["price", 25], ["created_at", "2020-04-24 18:02:50.242221"], ["updated_at", "2020-04-24 18:02:50.242221"], ["user_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReward Create (0.3ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sleep Over"], ["description", "Use your credits to have a friend over for a sleep over."], ["price", 75], ["created_at", "2020-04-24 18:02:50.247132"], ["updated_at", "2020-04-24 18:02:50.247132"], ["user_id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "New Video Game"], ["description", "Use your credits to purchase a new video game. (Approval of game contigent. Discalimer: If not approved you will be refunded for your purchase in full.)"], ["price", 250], ["created_at", "2020-04-24 18:02:50.252176"], ["updated_at", "2020-04-24 18:02:50.252176"], ["user_id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReward Create (0.3ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dessert"], ["description", "Use your credits to have dessert and you get to choose what is for dessert."], ["price", 30], ["created_at", "2020-04-24 18:02:50.257123"], ["updated_at", "2020-04-24 18:02:50.257123"], ["user_id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReward Create (0.3ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Outing"], ["description", "Use your credits to got to the zoo, restaurant, or some place of your choice."], ["price", 150], ["created_at", "2020-04-24 18:02:50.262197"], ["updated_at", "2020-04-24 18:02:50.262197"], ["user_id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bonus Screen Time"], ["description", "Use your credits to get more time on video games, watching movies, etc."], ["price", 25], ["created_at", "2020-04-24 18:02:50.267083"], ["updated_at", "2020-04-24 18:02:50.267083"], ["user_id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Create (0.4ms)[0m  [1m[32mINSERT INTO "families" ("family_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["family_id", "test123"], ["created_at", "2020-04-24 18:06:26.639820"], ["updated_at", "2020-04-24 18:06:26.639820"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Create (0.3ms)[0m  [1m[32mINSERT INTO "families" ("family_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["family_id", "test456"], ["created_at", "2020-04-24 18:06:26.644269"], ["updated_at", "2020-04-24 18:06:26.644269"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Load (0.3ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "family_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstname", "Mitchell"], ["lastname", "Alton"], ["email", "mitchell.alton@live.com"], ["family_id", 3], ["created_at", "2020-04-24 18:06:26.680377"], ["updated_at", "2020-04-24 18:06:26.680377"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Load (0.2ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "family_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstname", "Leasette"], ["lastname", "Alton"], ["email", "leasette@test.com"], ["family_id", 4], ["created_at", "2020-04-24 18:06:26.690457"], ["updated_at", "2020-04-24 18:06:26.690457"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "family_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstname", "Gracen"], ["lastname", "Alton"], ["email", "gracen@test.com"], ["family_id", 3], ["created_at", "2020-04-24 18:06:26.708301"], ["updated_at", "2020-04-24 18:06:26.708301"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Load (0.2ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "family_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstname", "Airah"], ["lastname", "Casey"], ["email", "airah@test.com"], ["family_id", 4], ["created_at", "2020-04-24 18:06:26.714533"], ["updated_at", "2020-04-24 18:06:26.714533"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("amount", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 0], ["created_at", "2020-04-24 18:06:26.726133"], ["updated_at", "2020-04-24 18:06:26.726133"], ["user_id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("amount", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 0], ["created_at", "2020-04-24 18:06:26.730534"], ["updated_at", "2020-04-24 18:06:26.730534"], ["user_id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCreditLine Create (0.3ms)[0m  [1m[32mINSERT INTO "credit_lines" ("amount", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 500], ["created_at", "2020-04-24 18:06:26.741084"], ["updated_at", "2020-04-24 18:06:26.741084"], ["user_id", 7]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCreditLine Create (0.2ms)[0m  [1m[32mINSERT INTO "credit_lines" ("amount", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["amount", 500], ["created_at", "2020-04-24 18:06:26.746425"], ["updated_at", "2020-04-24 18:06:26.746425"], ["user_id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCreditScore Create (0.3ms)[0m  [1m[32mINSERT INTO "credit_scores" ("score", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["score", 800], ["created_at", "2020-04-24 18:06:26.757060"], ["updated_at", "2020-04-24 18:06:26.757060"], ["user_id", 7]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCreditScore Create (0.2ms)[0m  [1m[32mINSERT INTO "credit_scores" ("score", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["score", 800], ["created_at", "2020-04-24 18:06:26.761775"], ["updated_at", "2020-04-24 18:06:26.761775"], ["user_id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReward Create (0.4ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sleep Over"], ["description", "Use your credits to have a friend over for a sleep over."], ["price", 75], ["created_at", "2020-04-24 18:06:26.772408"], ["updated_at", "2020-04-24 18:06:26.772408"], ["user_id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReward Create (0.4ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "New Video Game"], ["description", "Use your credits to purchase a new video game. (Approval of game contigent. Discalimer: If not approved you will be refunded for your purchase in full.)"], ["price", 250], ["created_at", "2020-04-24 18:06:26.777635"], ["updated_at", "2020-04-24 18:06:26.777635"], ["user_id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReward Create (0.3ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dessert"], ["description", "Use your credits to have dessert and you get to choose what is for dessert."], ["price", 30], ["created_at", "2020-04-24 18:06:26.782722"], ["updated_at", "2020-04-24 18:06:26.782722"], ["user_id", 5]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Outing"], ["description", "Use your credits to got to the zoo, restaurant, or some place of your choice."], ["price", 150], ["created_at", "2020-04-24 18:06:26.788069"], ["updated_at", "2020-04-24 18:06:26.788069"], ["user_id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bonus Screen Time"], ["description", "Use your credits to get more time on video games, watching movies, etc."], ["price", 25], ["created_at", "2020-04-24 18:06:26.793345"], ["updated_at", "2020-04-24 18:06:26.793345"], ["user_id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sleep Over"], ["description", "Use your credits to have a friend over for a sleep over."], ["price", 75], ["created_at", "2020-04-24 18:06:26.797973"], ["updated_at", "2020-04-24 18:06:26.797973"], ["user_id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "New Video Game"], ["description", "Use your credits to purchase a new video game. (Approval of game contigent. Discalimer: If not approved you will be refunded for your purchase in full.)"], ["price", 250], ["created_at", "2020-04-24 18:06:26.802634"], ["updated_at", "2020-04-24 18:06:26.802634"], ["user_id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dessert"], ["description", "Use your credits to have dessert and you get to choose what is for dessert."], ["price", 30], ["created_at", "2020-04-24 18:06:26.807422"], ["updated_at", "2020-04-24 18:06:26.807422"], ["user_id", 6]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mReward Create (0.3ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Outing"], ["description", "Use your credits to got to the zoo, restaurant, or some place of your choice."], ["price", 150], ["created_at", "2020-04-24 18:06:26.812377"], ["updated_at", "2020-04-24 18:06:26.812377"], ["user_id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mReward Create (0.2ms)[0m  [1m[32mINSERT INTO "rewards" ("name", "description", "price", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bonus Screen Time"], ["description", "Use your credits to get more time on video games, watching movies, etc."], ["price", 25], ["created_at", "2020-04-24 18:06:26.817187"], ["updated_at", "2020-04-24 18:06:26.817187"], ["user_id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChore Create (0.5ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Clean the Kitchen"], ["pay", 20], ["created_at", "2020-04-24 18:06:26.828125"], ["updated_at", "2020-04-24 18:06:26.828125"], ["user_id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Clean the Bathroom"], ["pay", 25], ["created_at", "2020-04-24 18:06:26.833098"], ["updated_at", "2020-04-24 18:06:26.833098"], ["user_id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sweep the Floors"], ["pay", 15], ["created_at", "2020-04-24 18:06:26.837743"], ["updated_at", "2020-04-24 18:06:26.837743"], ["user_id", 5]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mow the lawn"], ["pay", 30], ["created_at", "2020-04-24 18:06:26.843318"], ["updated_at", "2020-04-24 18:06:26.843318"], ["user_id", 5]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Fold laundry"], ["pay", 20], ["created_at", "2020-04-24 18:06:26.851242"], ["updated_at", "2020-04-24 18:06:26.851242"], ["user_id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChore Create (0.3ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Vaccum the carpets"], ["pay", 15], ["created_at", "2020-04-24 18:06:26.865207"], ["updated_at", "2020-04-24 18:06:26.865207"], ["user_id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Power wash windows"], ["pay", 100], ["created_at", "2020-04-24 18:06:26.869705"], ["updated_at", "2020-04-24 18:06:26.869705"], ["user_id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Clean the Kitchen"], ["pay", 20], ["created_at", "2020-04-24 18:06:26.874265"], ["updated_at", "2020-04-24 18:06:26.874265"], ["user_id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Clean the Bathroom"], ["pay", 25], ["created_at", "2020-04-24 18:06:26.878475"], ["updated_at", "2020-04-24 18:06:26.878475"], ["user_id", 6]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sweep the Floors"], ["pay", 15], ["created_at", "2020-04-24 18:06:26.883407"], ["updated_at", "2020-04-24 18:06:26.883407"], ["user_id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mow the lawn"], ["pay", 30], ["created_at", "2020-04-24 18:06:26.887835"], ["updated_at", "2020-04-24 18:06:26.887835"], ["user_id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Fold laundry"], ["pay", 20], ["created_at", "2020-04-24 18:06:26.892372"], ["updated_at", "2020-04-24 18:06:26.892372"], ["user_id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mChore Create (0.3ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Vaccum the carpets"], ["pay", 15], ["created_at", "2020-04-24 18:06:26.896526"], ["updated_at", "2020-04-24 18:06:26.896526"], ["user_id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mChore Create (0.2ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Power wash windows"], ["pay", 100], ["created_at", "2020-04-24 18:06:26.901040"], ["updated_at", "2020-04-24 18:06:26.901040"], ["user_id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mChore Load (0.4ms)[0m  [1m[34mSELECT "chores".* FROM "chores" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mChore Load (0.7ms)[0m  [1m[34mSELECT "chores".* FROM "chores" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT "families".* FROM "families" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChore Load (0.5ms)[0m  [1m[34mSELECT "chores".* FROM "chores" WHERE "chores"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT "rewards".* FROM "rewards" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mReward Load (0.3ms)[0m  [1m[34mSELECT "rewards".* FROM "rewards" WHERE "rewards"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mChore Load (0.5ms)[0m  [1m[34mSELECT "chores".* FROM "chores" WHERE "chores"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
