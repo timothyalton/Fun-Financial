@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :families
   resources :rewards
   resources :chores
+  resources :credit_line
+  resources :credit_score
+  resources :wallet
+  
 
 
 end
