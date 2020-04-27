@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    enum role: [:gaurdian, :child]
+
     has_many :chores
     has_many :rewards
     has_one :credit_score
