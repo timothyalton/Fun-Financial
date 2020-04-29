@@ -25,11 +25,11 @@ f2 = Family.create(family_id: 'test456')
 
 # Users (parents/children)
 
-p1 = User.create(firstname: 'Mitchell', lastname: 'Alton', email: 'mitchell.alton@live.com', family_id: f1.id)
-p2 = User.create(firstname: 'Leasette', lastname: 'Alton', email: 'leasette@test.com', family_id: f2.id)
+p1 = User.create(firstname: 'Mitchell', lastname: 'Alton', username: 'parent1', email: 'mitchell.alton@live.com', family_id: f1.id)
+p2 = User.create(firstname: 'Leasette', lastname: 'Alton', username: 'parent2', email: 'leasette@test.com', family_id: f2.id)
 
-c1 = User.create(firstname: 'Gracen', lastname: 'Alton', email: 'gracen@test.com', family_id: f1.id)
-c2 = User.create(firstname: 'Airah', lastname: 'Casey', email: 'airah@test.com', family_id: f2.id)
+c1 = User.create(firstname: 'Gracen', lastname: 'Alton', username: 'child1', email: 'gracen@test.com', family_id: f1.id)
+c2 = User.create(firstname: 'Airah', lastname: 'Casey', username: 'child2', email: 'airah@test.com', family_id: f2.id)
 
 # Wallets
 

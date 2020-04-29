@@ -800,3 +800,224 @@ Migrating to AddRoleToUsers (20200427194028)
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
   [1m[36mChore Create (0.3ms)[0m  [1m[32mINSERT INTO "chores" ("name", "pay", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Power wash windows"], ["pay", 100], ["created_at", "2020-04-27 19:44:09.726655"], ["updated_at", "2020-04-27 19:44:09.726655"], ["user_id", 10]]
   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2784033820721176485)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT "families".* FROM "families"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Destroy (0.2ms)[0m  [1m[31mDELETE FROM "families" WHERE "families"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Destroy (0.2ms)[0m  [1m[31mDELETE FROM "families" WHERE "families"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWallet Load (0.6ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "wallets" WHERE "wallets"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWallet Destroy (0.1ms)[0m  [1m[31mDELETE FROM "wallets" WHERE "wallets"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mChore Load (0.6ms)[0m  [1m[34mSELECT "chores".* FROM "chores"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 15]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 16]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 17]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 18]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 19]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 20]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 21]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 22]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 23]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 24]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.6ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 25]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.6ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 26]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.4ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 27]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChore Destroy (0.4ms)[0m  [1m[31mDELETE FROM "chores" WHERE "chores"."id" = $1[0m  [["id", 28]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mReward Load (0.7ms)[0m  [1m[34mSELECT "rewards".* FROM "rewards"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReward Destroy (0.3ms)[0m  [1m[31mDELETE FROM "rewards" WHERE "rewards"."id" = $1[0m  [["id", 21]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReward Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rewards" WHERE "rewards"."id" = $1[0m  [["id", 22]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReward Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rewards" WHERE "rewards"."id" = $1[0m  [["id", 23]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReward Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rewards" WHERE "rewards"."id" = $1[0m  [["id", 24]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReward Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rewards" WHERE "rewards"."id" = $1[0m  [["id", 25]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReward Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rewards" WHERE "rewards"."id" = $1[0m  [["id", 26]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReward Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rewards" WHERE "rewards"."id" = $1[0m  [["id", 27]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReward Destroy (0.1ms)[0m  [1m[31mDELETE FROM "rewards" WHERE "rewards"."id" = $1[0m  [["id", 28]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReward Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rewards" WHERE "rewards"."id" = $1[0m  [["id", 29]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReward Destroy (0.2ms)[0m  [1m[31mDELETE FROM "rewards" WHERE "rewards"."id" = $1[0m  [["id", 30]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCreditLine Load (0.5ms)[0m  [1m[34mSELECT "credit_lines".* FROM "credit_lines"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCreditLine Destroy (0.2ms)[0m  [1m[31mDELETE FROM "credit_lines" WHERE "credit_lines"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCreditLine Destroy (0.2ms)[0m  [1m[31mDELETE FROM "credit_lines" WHERE "credit_lines"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCreditScore Load (0.5ms)[0m  [1m[34mSELECT "credit_scores".* FROM "credit_scores"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCreditScore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "credit_scores" WHERE "credit_scores"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCreditScore Destroy (0.2ms)[0m  [1m[31mDELETE FROM "credit_scores" WHERE "credit_scores"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Create (0.9ms)[0m  [1m[32mINSERT INTO "families" ("family_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["family_id", "test123"], ["created_at", "2020-04-29 09:29:32.123461"], ["updated_at", "2020-04-29 09:29:32.123461"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Create (0.3ms)[0m  [1m[32mINSERT INTO "families" ("family_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["family_id", "test456"], ["created_at", "2020-04-29 09:29:32.127929"], ["updated_at", "2020-04-29 09:29:32.127929"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2784033820721176485)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUsernameToUser (20200429094903)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "users" ADD "username" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200429094903"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mFamily Load (0.2ms)[0m  [1m[34mSELECT "families".* FROM "families"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Destroy (0.2ms)[0m  [1m[31mDELETE FROM "families" WHERE "families"."id" = $1[0m  [["id", 7]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Destroy (0.2ms)[0m  [1m[31mDELETE FROM "families" WHERE "families"."id" = $1[0m  [["id", 8]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWallet Load (0.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  [1m[36mChore Load (0.2ms)[0m  [1m[34mSELECT "chores".* FROM "chores"[0m
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT "rewards".* FROM "rewards"[0m
+  [1m[36mCreditLine Load (0.2ms)[0m  [1m[34mSELECT "credit_lines".* FROM "credit_lines"[0m
+  [1m[36mCreditScore Load (0.2ms)[0m  [1m[34mSELECT "credit_scores".* FROM "credit_scores"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Create (0.3ms)[0m  [1m[32mINSERT INTO "families" ("family_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["family_id", "test123"], ["created_at", "2020-04-29 09:50:44.678600"], ["updated_at", "2020-04-29 09:50:44.678600"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Create (0.2ms)[0m  [1m[32mINSERT INTO "families" ("family_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["family_id", "test456"], ["created_at", "2020-04-29 09:50:44.682142"], ["updated_at", "2020-04-29 09:50:44.682142"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-04-29 09:03:18 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mitchell/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mitchell/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.2ms | Allocations: 308)
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 1729)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2784033820721176485)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2784033820721176485)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2784033820721176485)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordToUser (20200429180248)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200429180248"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2784033820721176485)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT "families".* FROM "families"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Destroy (0.2ms)[0m  [1m[31mDELETE FROM "families" WHERE "families"."id" = $1[0m  [["id", 9]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Destroy (0.2ms)[0m  [1m[31mDELETE FROM "families" WHERE "families"."id" = $1[0m  [["id", 10]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWallet Load (0.5ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets"[0m
+  [1m[36mChore Load (0.5ms)[0m  [1m[34mSELECT "chores".* FROM "chores"[0m
+  [1m[36mReward Load (0.4ms)[0m  [1m[34mSELECT "rewards".* FROM "rewards"[0m
+  [1m[36mCreditLine Load (0.4ms)[0m  [1m[34mSELECT "credit_lines".* FROM "credit_lines"[0m
+  [1m[36mCreditScore Load (0.5ms)[0m  [1m[34mSELECT "credit_scores".* FROM "credit_scores"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Create (0.7ms)[0m  [1m[32mINSERT INTO "families" ("family_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["family_id", "test123"], ["created_at", "2020-04-29 18:03:09.925411"], ["updated_at", "2020-04-29 18:03:09.925411"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFamily Create (0.2ms)[0m  [1m[32mINSERT INTO "families" ("family_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["family_id", "test456"], ["created_at", "2020-04-29 18:03:09.929348"], ["updated_at", "2020-04-29 18:03:09.929348"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "parent1"], ["LIMIT", 1]]
+  [1m[36mFamily Load (0.2ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "parent2"], ["LIMIT", 1]]
+  [1m[36mFamily Load (0.1ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "child1"], ["LIMIT", 1]]
+  [1m[36mFamily Load (0.1ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "child2"], ["LIMIT", 1]]
+  [1m[36mFamily Load (0.1ms)[0m  [1m[34mSELECT "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

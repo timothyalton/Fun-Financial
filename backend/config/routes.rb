@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :credit_line
   resources :credit_score
   resources :wallet
+
+  post '/user_signup', to: 'users#signup'
   
 
 
