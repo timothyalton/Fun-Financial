@@ -1,2 +1,8 @@
 class FamiliesController < ApplicationController
+
+    
+
+    
+
+   
 end

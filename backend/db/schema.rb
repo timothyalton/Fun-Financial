@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_04_29_180248) do
     t.integer "pay"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "completed"
+    t.boolean "completed", default: false
     t.integer "user_id"
   end
 
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_04_29_180248) do
   end
 
   create_table "families", force: :cascade do |t|
-    t.string "family_id"
+    t.string "family_pin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

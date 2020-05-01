@@ -19,46 +19,46 @@ CreditScore.destroy_all
 
 #families
 
-f1 = Family.create(family_id: 'test123')
-f2 = Family.create(family_id: 'test456')
+f1 = Family.create(family_pin: 'test123')
+f2 = Family.create(family_pin: 'test456')
 
 
 # Users (parents/children)
 
-p1 = User.create(firstname: 'Mitchell', lastname: 'Alton', username: 'parent1', email: 'mitchell.alton@live.com', family_id: f1.id)
-p2 = User.create(firstname: 'Leasette', lastname: 'Alton', username: 'parent2', email: 'leasette@test.com', family_id: f2.id)
+p1 = User.create(firstname: 'Mitchell', lastname: 'Alton', username: 'parent1', email: 'mitchell.alton@live.com', family_id: f1.id, role: 0, password: 'test123', password_confirmation: 'test123')
+p2 = User.create(firstname: 'Leasette', lastname: 'Alton', username: 'parent2', email: 'leasette@test.com', family_id: f2.id, role: 0, password: 'test123', password_confirmation: 'test123')
 
-c1 = User.create(firstname: 'Gracen', lastname: 'Alton', username: 'child1', email: 'gracen@test.com', family_id: f1.id)
-c2 = User.create(firstname: 'Airah', lastname: 'Casey', username: 'child2', email: 'airah@test.com', family_id: f2.id)
+c1 = User.create(firstname: 'Gracen', lastname: 'Alton', username: 'child1', email: 'gracen@test.com', family_id: f1.id, role: 1, password: 'test123', password_confirmation: 'test123')
+c2 = User.create(firstname: 'Airah', lastname: 'Casey', username: 'child2', email: 'airah@test.com', family_id: f2.id, role: 1, password: 'test123', password_confirmation: 'test123')
 
 # Wallets
 
-w1 = Wallet.create(amount: 0, user_id: c1.id)
-w2 = Wallet.create(amount: 0, user_id: c2.id)
+Wallet.create(amount: 0, user_id: c1.id)
+Wallet.create(amount: 0, user_id: c2.id)
 
 # Credit Lines
 
-cl1 = CreditLine.create(amount: 500, user_id: c1.id)
-cl2 = CreditLine.create(amount: 500, user_id: c2.id)
+CreditLine.create(amount: 500, user_id: c1.id)
+CreditLine.create(amount: 500, user_id: c2.id)
 
 # Credit Scores
 
-s1 = CreditScore.create(score: 800, user_id: c1.id)
-s2 = CreditScore.create(score: 800, user_id: c2.id)
+CreditScore.create(score: 800, user_id: c1.id)
+CreditScore.create(score: 800, user_id: c2.id)
 
 # Rewards
 
-r1 = Reward.create(name: "Sleep Over", description: "Use your credits to have a friend over for a sleep over.", price: 75, user_id: p1.id)
-r2 = Reward.create(name: "New Video Game", description: "Use your credits to purchase a new video game. (Approval of game contigent. Discalimer: If not approved you will be refunded for your purchase in full.)", price: 250, user_id: p1.id)
-r3 = Reward.create(name: "Dessert", description: "Use your credits to have dessert and you get to choose what is for dessert.", price: 30, user_id: p1.id)
-r4 = Reward.create(name: "Outing", description: "Use your credits to got to the zoo, restaurant, or some place of your choice.", price: 150, user_id: p1.id)
-r5 = Reward.create(name: "Bonus Screen Time", description: "Use your credits to get more time on video games, watching movies, etc.", price: 25, user_id: p1.id)
+Reward.create(name: "Sleep Over", description: "Use your credits to have a friend over for a sleep over.", price: 75, user_id: p1.id)
+Reward.create(name: "New Video Game", description: "Use your credits to purchase a new video game. (Approval of game contigent. Discalimer: If not approved you will be refunded for your purchase in full.)", price: 250, user_id: p1.id)
+Reward.create(name: "Dessert", description: "Use your credits to have dessert and you get to choose what is for dessert.", price: 30, user_id: p1.id)
+Reward.create(name: "Outing", description: "Use your credits to got to the zoo, restaurant, or some place of your choice.", price: 150, user_id: p1.id)
+Reward.create(name: "Bonus Screen Time", description: "Use your credits to get more time on video games, watching movies, etc.", price: 25, user_id: p1.id)
 
-r6 = Reward.create(name: "Sleep Over", description: "Use your credits to have a friend over for a sleep over.", price: 75, user_id: p2.id)
-r7 = Reward.create(name: "New Video Game", description: "Use your credits to purchase a new video game. (Approval of game contigent. Discalimer: If not approved you will be refunded for your purchase in full.)", price: 250, user_id: p2.id)
-r8 = Reward.create(name: "Dessert", description: "Use your credits to have dessert and you get to choose what is for dessert.", price: 30, user_id: p2.id)
-r9 = Reward.create(name: "Outing", description: "Use your credits to got to the zoo, restaurant, or some place of your choice.", price: 150, user_id: p2.id)
-r10 = Reward.create(name: "Bonus Screen Time", description: "Use your credits to get more time on video games, watching movies, etc.", price: 25, user_id: p2.id)
+Reward.create(name: "Sleep Over", description: "Use your credits to have a friend over for a sleep over.", price: 75, user_id: p2.id)
+Reward.create(name: "New Video Game", description: "Use your credits to purchase a new video game. (Approval of game contigent. Discalimer: If not approved you will be refunded for your purchase in full.)", price: 250, user_id: p2.id)
+Reward.create(name: "Dessert", description: "Use your credits to have dessert and you get to choose what is for dessert.", price: 30, user_id: p2.id)
+Reward.create(name: "Outing", description: "Use your credits to got to the zoo, restaurant, or some place of your choice.", price: 150, user_id: p2.id)
+Reward.create(name: "Bonus Screen Time", description: "Use your credits to get more time on video games, watching movies, etc.", price: 25, user_id: p2.id)
 
 # Chores
 

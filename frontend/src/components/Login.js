@@ -1,7 +1,14 @@
 import React, {useState} from 'react';
 import { render } from 'react-dom';
+import {withRouter} from 'react-router-dom';
 
-const Login = ()=> {
+
+const Login = (props)=> {
+
+    const nextPath = (path) => {
+        props.history.push(path);
+        // console.log(props)
+    }
 
     return(
         <div>
@@ -15,7 +22,7 @@ const Login = ()=> {
                 <br/>
                 <input type="submit" value="Login" />
             </form>
-            <button>Sign Up</button>
+            <button onClick={()=> nextPath('/signup')}>Sign Up</button>
         </div>
     )
 }
