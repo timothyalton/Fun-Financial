@@ -1,9 +1,12 @@
 class User < ApplicationRecord
-    enum role: [:gaurdian, :child]
+    enum role: [:gaurdian, :child] 
 
     has_secure_password
 
     validates :username, uniqueness: { case_sensitive: false }, presence: true
+    validates :email, uniqueness: { case_sensitive: false }, presence: true
+    validates :firstname, presence: true
+    validates :lastname, presence: true 
     validates :password, length: { in: 6..20 }
     validates :password_confirmation, presence: true
 

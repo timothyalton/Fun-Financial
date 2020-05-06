@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
+import { render } from 'react-dom';
+import {withRouter} from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
-const SignUp = ()=> {
+
+const SignUp = (props)=> {
 
     const [account, setAccount] = useState({account: "parent"})
   
@@ -8,6 +12,10 @@ const SignUp = ()=> {
     
 
 
+    const nextPath = (path) => {
+        props.history.push(path);
+        // console.log(props)
+    }
 
     const handleChange = (e) =>{
         // console.log(e.target)
@@ -36,8 +44,8 @@ const SignUp = ()=> {
                role: account.account === "parent" ? 0 : 1          
             })
         })
-        .then(resp => resp.json())
-        .then(console.log)
+        .then(nextPath('/'))
+        .then(alert('Account Created! Please log in.'))
     }
 
     // useEffect(()=> console.log(loginInfo))
@@ -50,9 +58,9 @@ const SignUp = ()=> {
                 <label>Email:  </label>
                 <input onChange={(e)=> handleChange(e)} name="email" type="text" placeholder="enter valid email" /><br/>
                 <label>First Name:  </label>
-                <input onChange={(e)=> handleChange(e)} name="firstname" type="text" placeholder="enter valid email" /><br/>
+                <input onChange={(e)=> handleChange(e)} name="firstname" type="text" placeholder="enter first name" /><br/>
                 <label>Last Name:  </label>
-                <input onChange={(e)=> handleChange(e)} name="lastname" type="text" placeholder="enter valid email" /><br/>
+                <input onChange={(e)=> handleChange(e)} name="lastname" type="text" placeholder="enter last name" /><br/>
                 <label>UserName:  </label>
                 <input onChange={(e)=> handleChange(e)} name="username" type="text" placeholder="enter a username" /><br/>
                 <label>Password:  </label>

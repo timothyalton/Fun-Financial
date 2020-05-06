@@ -13,6 +13,25 @@ import ChoresMainContainer from './containers/ChoresMainContainer'
 
 
 const App = () => {
+
+  const getRewards = () => {
+    fetch('http://localhost:3000/rewards', {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${localStorage.token}`
+      }
+    })
+    .then(resp => resp.json())
+    .then(console.log)
+  }
+
+  const getChores = () => {
+    fetch('http://localhost:3000/chores')
+
+  }
+
+
+
   return (
     <BrowserRouter>
       <div>

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :wallet
 
   post '/user_signup', to: 'users#signup'
+  post '/login', to: 'users#login'
   
 
 
